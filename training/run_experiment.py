@@ -64,7 +64,7 @@ def main():
 
     Sample command:
     ```
-    python training/run_experiment.py --max_epochs=3 --gpus='0,' --num_workers=20 --model_class=MLP --data_class=MNIST
+    python training/run_experiment.py --max_epochs=3 --gpus='0,' --num_workers=20 --model_class=mlp.MLP --data_class=mnist.MNIST
     ```
     """
     parser = _setup_parser()
