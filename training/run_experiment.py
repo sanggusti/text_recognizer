@@ -7,7 +7,7 @@ import torch
 import pytorch_lightning as pl
 import wandb
 
-from text_recognizer.lit_models import base
+from text_recognizer.lit_models import base, ctc
 
 
 # In order to ensure reproducible experiments, we must set random seeds.
@@ -64,7 +64,7 @@ def main():
 
     Sample command:
     ```
-    python training/run_experiment.py --max_epochs=3 --gpus='0,' --num_workers=20 --model_class=mlp.MLP --data_class=mnist.MNIST
+    python training/run_experiment.py --max_epochs=3 --gpus='0,' --num_workers=20 --model_class=MLP --data_class=MNIST
     ```
     """
     parser = _setup_parser()
@@ -76,6 +76,9 @@ def main():
 
     if args.loss not in ("ctc", "transformer"):
         lit_model_class = base.BaseLitModel
+
+    if args.loss == "ctc":
+        lit_model_class = ctc.CTCLitModel
 
     if args.load_checkpoint is not None:
         lit_model = lit_model_class.load_from_checkpoint(
