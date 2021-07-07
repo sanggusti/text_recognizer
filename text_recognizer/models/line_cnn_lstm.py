@@ -3,7 +3,7 @@ import argparse
 import torch
 import torch.nn as nn
 
-from text_recognizer.models.line_cnn import LineCNN
+from .line_cnn import LineCNN
 
 LSTM_DIM = 512
 LSTM_LAYERS = 1

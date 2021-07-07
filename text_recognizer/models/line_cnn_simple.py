@@ -5,7 +5,7 @@ import math
 import torch
 import torch.nn as nn
 
-from text_recognizer.models.cnn import CNN, IMAGE_SIZE
+from .cnn import CNN, IMAGE_SIZE
 
 WINDOW_WIDTH = 28
 WINDOW_STRIDE = 28

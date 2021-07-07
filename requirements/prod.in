@@ -3,7 +3,7 @@ editdistance
 flask
 h5py
 numpy
-pytorch-lightning
+pytorch-lightning<1.2
 requests
 smart_open
 toml
