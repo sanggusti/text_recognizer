@@ -1,5 +1,7 @@
 ### Line CNN
 
+https://wandb.ai/gustiwinata/text-recognizer/overview
+
 - LineCNNSimple: Reading multiple characters at once
 
 ```
